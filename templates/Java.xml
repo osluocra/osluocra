@@ -12,13 +12,7 @@
   </template>
   <template name="mainmethod" value="public static void main (String[] args){&#10;}" description="adding main method" toReformat="false" toShortenFQNames="true">
     <context>
-      <option name="COMPLETION" value="false" />
-      <option name="JAVA_CODE" value="true" />
-      <option name="JAVA_COMMENT" value="false" />
-      <option name="JAVA_DECLARATION" value="false" />
-      <option name="JAVA_EXPRESSION" value="false" />
-      <option name="JAVA_STATEMENT" value="false" />
-      <option name="JAVA_STRING" value="false" />
+      <option name="JAVA_DECLARATION" value="true" />
     </context>
   </template>
 </templateSet>
