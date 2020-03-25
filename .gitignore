@@ -1,6 +1,9 @@
 
 .idea/
 target/
+data/output/
+data/output1/
+data/anotheroutput/
 # Compiled class file
 *.class
 
