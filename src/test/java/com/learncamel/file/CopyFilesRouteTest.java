@@ -22,6 +22,7 @@ public class CopyFilesRouteTest extends CamelTestSupport {
         File file = new File("data/output");
 
         assertTrue(file.isDirectory());
+
         assertEquals(2, file.listFiles().length);
     }
 }
