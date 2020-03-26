@@ -17,7 +17,7 @@ public class SampleDirectRouteTest extends CamelTestSupport {
     @Test
     public void sampleRouteTest() throws InterruptedException {
 
-        //ProducterTemplate template
+        //ProducerTemplate template
         template.sendBody("direct:sampleInput", "1234,Dilip,Udemy Instructor");
 
         Thread.sleep(5000);
