@@ -22,13 +22,10 @@ public class CopyFilesCamelMultiRoute {
                 }
             });
 
-
             System.out.println("Starting context");
             context.start();
 
             Thread.sleep(iSleepTime);
-
-
             context.stop();
 
         } catch (Exception e) {
