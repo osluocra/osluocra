@@ -1,0 +1,6 @@
+<application>
+  <component name="TodoConfiguration">
+    <pattern pattern="\b(todo|fixme)\.*" />
+    <pattern pattern="\btodo-lab\*" />
+  </component>
+</application>
