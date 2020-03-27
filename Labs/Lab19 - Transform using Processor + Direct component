@@ -1,0 +1,23 @@
+    todo-Lab19
+         1 Create class CamelModifyDirectProcessorRoute inside routes.process package implement configure
+           1.1 from:"direct:processorInput"
+           1.2 log before process body and headers
+           1.3 process: new CamelDirectExampleProcessor() in package learcamel.procesor. Implement process method
+           1.4 log body and headers after
+           1.5, to:file:data/output?fileName=output.txt
+         2 Create  CamelModifyDirectProcessorRouteTest
+            2.1 override createRouteBuilder method and return new instance CamelModifyDirectProcessorRoute
+            2.2 create test method processorDirectTest
+               create two variables expected value and input
+               Get the output from template(producer) requestBody method
+               assert expected with output
+            2.3 create  test method processorDirectUsingMock
+                  Define expected value
+                  Obtain a Mockendpoint from: uri("mock:output") defined in the CamelModifyDirectProcessorRoute
+                  set the expected body received value
+                  Define input string
+                  Send input  to direct componend (defined in from) using producer(template var)
+                  assert if mock is satisfied
+
+
+
