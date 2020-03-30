@@ -4,6 +4,8 @@ target/
 data/output/
 data/output1/
 data/anotheroutput/
+data/sampleOutput
+
 # Compiled class file
 *.class
 
