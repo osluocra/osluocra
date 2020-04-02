@@ -12,18 +12,21 @@ public class XML2JSONRoute extends RouteBuilder {
                 .to("log:?level=INFO&showBody=true")
                 .marshal().xmljson()
                 .to("log:?level=INFO&showBody=true");
+
+        XmlJsonDataFormat xmlJsonDataFormat = new XmlJsonDataFormat();
+
+
+        xmlJsonDataFormat.setRootName("employee");
+
+
+        from("direct:unmarshalEmployeejson2xml")
+        .to("log:?level=INFO&showBody=true")
+                .unmarshal(xmlJsonDataFormat)//.xmljson()
+        .to("log:?level=INFO&showBody=true");
+
+
     }
 
-    XmlJsonDataFormat xmlJsonDataFormat = new XmlJsonDataFormat();
-
-
-    //xmlJsonDataFormat.setRootName("employee");
-
-
-   from("direct:unmarshalEmployeejson2xml"")
-        .to("log:?level=INFO&showBody=true")
-       .unmarshall(xmlJsonDataFormat)
-        .to("log:?level=INFO&showBody=true");
 
 
 }
