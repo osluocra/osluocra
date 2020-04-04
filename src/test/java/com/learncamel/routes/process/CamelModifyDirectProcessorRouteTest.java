@@ -17,6 +17,8 @@ public class CamelModifyDirectProcessorRouteTest extends CamelTestSupport {
     public void processorDirectTest(){
         String input ="1234,Oscar,20SEP1974";
         String expectedValue ="1234:Oscar:20SEP1974";
+
+        //template is a producer object
         String output = (String) template.requestBody("direct:processorInput", input);
 
         assertEquals(expectedValue, output);
