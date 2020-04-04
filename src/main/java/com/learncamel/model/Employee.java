@@ -4,7 +4,7 @@ package com.learncamel.model;
 import org.apache.camel.dataformat.bindy.annotation.CsvRecord;
 import org.apache.camel.dataformat.bindy.annotation.DataField;
 
-@CsvRecord(separator=",",skipFirstLine=true)
+@CsvRecord(separator=",",skipFirstLine=true, generateHeaderColumns = true)
 public class Employee {
 
     @DataField(pos=1)
@@ -68,6 +68,18 @@ public class Employee {
                 "id='" + id + '\'' +
                 ", name='" + name + '\'' +
                 ", hireDate='" + hireDate + '\'' +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
                 '}';
+    }
+
+    public Employee(String id, String name, String firstName, String lastName) {
+        this.id = id;
+        this.name = name;
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+
+    public Employee() {
     }
 }
