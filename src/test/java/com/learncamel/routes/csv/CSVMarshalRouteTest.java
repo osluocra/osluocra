@@ -32,6 +32,7 @@ public class CSVMarshalRouteTest extends CamelTestSupport {
 
         File file = new File("data/csv/output");
 
+
         assertTrue(file.isDirectory());
 
 
