@@ -27,8 +27,14 @@ public class FixedLengthUnmarshalDateRouteTest extends CamelTestSupport {
 
         LocalDate juanyHiredDate = LocalDate.of(2018, 4, 28);
 
+
+        assertEquals(2, lstEmployees.size());
+
         assertEquals(oscarHiredDate, lstEmployees.get(0).getJoiningDate());
         assertEquals(juanyHiredDate, lstEmployees.get(1).getJoiningDate());
+
+        assertEquals(45, lstEmployees.get(0).getAge());
+        assertEquals(50, lstEmployees.get(1).getAge());
 
 
 
