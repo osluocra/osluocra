@@ -3,6 +3,7 @@ package com.learncamel.model;
 import org.apache.camel.dataformat.bindy.annotation.DataField;
 import org.apache.camel.dataformat.bindy.annotation.FixedLengthRecord;
 
+import java.math.BigDecimal;
 import java.time.LocalDate;
 
 @FixedLengthRecord
@@ -14,7 +15,7 @@ public class EmployeeWithFixedLengthDate {
     @DataField(pos=5, length = 20, trim=true, align="L")
     private String name;
 
-    @DataField(pos=25, length = 17)
+    @DataField(pos=25, length = 17, trim=true, align="L")
     private String role;
 
     @DataField(pos=42,length=9,pattern = "ddMMMyyyy")
@@ -24,12 +25,16 @@ public class EmployeeWithFixedLengthDate {
     @DataField(pos=51, delimiter = "^")
     private int age;
 
-    public int getAge() {
-        return age;
+    @DataField(pos=54, length =6, precision = 2)
+    private BigDecimal salary;
+
+
+    public BigDecimal getSalary() {
+        return salary;
     }
 
-    public void setAge(int age) {
-        this.age = age;
+    public void setSalary(BigDecimal salary) {
+        this.salary = salary;
     }
 
     @Override
@@ -40,7 +45,16 @@ public class EmployeeWithFixedLengthDate {
                 ", role='" + role + '\'' +
                 ", joiningDate=" + joiningDate +
                 ", age=" + age +
+                ", salary=" + salary +
                 '}';
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
     }
 
     public String getId() {
