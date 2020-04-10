@@ -25,7 +25,7 @@ public class EmployeeWithFixedLengthDate {
     @DataField(pos=51, delimiter = "^")
     private int age;
 
-    @DataField(pos=54, length =6, precision = 2)
+    @DataField(pos=54, length =8, precision = 2)
     private BigDecimal salary;
 
 
@@ -52,6 +52,7 @@ public class EmployeeWithFixedLengthDate {
     public int getAge() {
         return age;
     }
+
 
     public void setAge(int age) {
         this.age = age;
