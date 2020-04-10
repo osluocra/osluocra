@@ -1,4 +1,19 @@
 package com.learncamel.eip.aggregator;
 
-public class AggregatorSimpleRouteStrategy {
+import org.apache.camel.Exchange;
+
+public class AggregatorSimpleRouteStrategy implements org.apache.camel.processor.aggregate.AggregationStrategy {
+    @Override
+    public Exchange aggregate(Exchange oldExchange, Exchange newExchange) {
+        if(oldExchange==null){
+            return newExchange;
+        }else{
+            String oldBody = (String) oldExchange.getIn().getBody();
+            String newBody = newExchange.getIn().getBody(String.class);
+            newBody=oldBody.concat(newBody);
+            newExchange.getIn().setBody(newBody);
+        }
+
+        return newExchange;
+    }
 }
