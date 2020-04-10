@@ -15,7 +15,9 @@ public class ContentBaseRoute extends RouteBuilder {
                     .when(header("CamelFileNameConsumed").endsWith(".json"))
                         .to("file:data/output/json")
                     .otherwise()
-                        .to("file:data/output/other");
+                        .to("file:data/output/other").stop() //stop will avoid the file to be copy to data/output/all
+                     .end()
+                .to("file:data/output/all");
 
 
     }

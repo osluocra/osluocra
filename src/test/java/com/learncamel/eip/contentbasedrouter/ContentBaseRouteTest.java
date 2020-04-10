@@ -20,11 +20,13 @@ public class ContentBaseRouteTest extends CamelTestSupport {
         File txt = new File("data/output/txt");
         File json = new File("data/output/json");
         File other = new File("data/output/other");
+        File all = new File("data/output/other");
 
         assertTrue(html.isDirectory());
         assertTrue(json.isDirectory());
         assertTrue(txt.isDirectory());
         assertTrue(other.isDirectory());
+        assertTrue(all.isDirectory());
 
     }
 }
