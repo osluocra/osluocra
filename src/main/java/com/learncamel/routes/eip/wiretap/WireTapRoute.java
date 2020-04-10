@@ -1,4 +1,4 @@
-package com.learncamel.eip.wiretap;
+package com.learncamel.routes.eip.wiretap;
 
 import org.apache.camel.builder.RouteBuilder;
 

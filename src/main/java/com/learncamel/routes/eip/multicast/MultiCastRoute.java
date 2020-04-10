@@ -1,4 +1,4 @@
-package com.learncamel.eip.multicast;
+package com.learncamel.routes.eip.multicast;
 
 import org.apache.camel.builder.RouteBuilder;
 

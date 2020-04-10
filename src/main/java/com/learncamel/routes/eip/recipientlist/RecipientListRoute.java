@@ -1,6 +1,5 @@
-package com.learncamel.eip.recipientlist;
+package com.learncamel.routes.eip.recipientlist;
 
-import com.learncamel.eip.recipientlist.RecipientEIPProcessor;
 import org.apache.camel.builder.RouteBuilder;
 
 public class RecipientListRoute extends RouteBuilder {

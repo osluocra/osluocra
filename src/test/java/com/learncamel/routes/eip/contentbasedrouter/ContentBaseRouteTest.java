@@ -1,4 +1,4 @@
-package com.learncamel.eip.contentbasedrouter;
+package com.learncamel.routes.eip.contentbasedrouter;
 
 import org.apache.camel.RoutesBuilder;
 import org.apache.camel.test.junit4.CamelTestSupport;

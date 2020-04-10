@@ -1,4 +1,4 @@
-package com.learncamel.eip.aggregator;
+package com.learncamel.routes.eip.aggregator;
 
 import org.apache.camel.RoutesBuilder;
 import org.apache.camel.component.mock.MockEndpoint;

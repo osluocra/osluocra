@@ -1,4 +1,4 @@
-package com.learncamel.eip.recipientlist;
+package com.learncamel.routes.eip.recipientlist;
 
 import org.apache.camel.RoutesBuilder;
 import org.apache.camel.test.junit4.CamelTestSupport;

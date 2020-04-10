@@ -1,4 +1,4 @@
-package com.learncamel.eip.aggregator;
+package com.learncamel.aggregate;
 
 import org.apache.camel.Exchange;
 

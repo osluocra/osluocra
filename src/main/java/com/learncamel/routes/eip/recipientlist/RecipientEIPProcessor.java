@@ -1,4 +1,4 @@
-package com.learncamel.eip.recipientlist;
+package com.learncamel.routes.eip.recipientlist;
 
 import org.apache.camel.Exchange;
 

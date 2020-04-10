@@ -1,5 +1,6 @@
-package com.learncamel.eip.aggregator;
+package com.learncamel.routes.eip.aggregator;
 
+import com.learncamel.aggregate.AggregatorSimpleRouteStrategy;
 import org.apache.camel.builder.RouteBuilder;
 
 public class AggregatorSimpleCompletionSizeRoute  extends RouteBuilder {
