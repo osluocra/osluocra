@@ -7,6 +7,7 @@ public class MultiCastRoute extends RouteBuilder {
     @Override
     public void configure() throws Exception {
         from("file:data/input?noop=true").multicast().parallelProcessing().stopOnException()
+                .log("Before ${body}")
                 .to("file:data/output1", "file:data/output2");
 
 /*

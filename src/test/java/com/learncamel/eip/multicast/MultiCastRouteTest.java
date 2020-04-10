@@ -14,7 +14,7 @@ public class MultiCastRouteTest extends CamelTestSupport {
 
     @Test
     public void MultiCastTest() throws InterruptedException {
-        //Thread.sleep(5000);
+        Thread.sleep(5000);
 
         File dir1 = new File("data/output1");
         File dir2 = new File("data/output2");
