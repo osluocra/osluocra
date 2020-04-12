@@ -25,6 +25,8 @@ public class AggregatorWithCompletionPredicateRouteTest extends CamelTestSupport
         MockEndpoint endpoint = getMockEndpoint("mock:output");
         endpoint.expectedBodiesReceived(expectedValue);
         template.sendBodyAndHeader(endpointUri,orderCreate, header ,headerValue);
+
+        Thread.sleep(10000);
         template.sendBodyAndHeader(endpointUri, orderConfirm, header, headerValue);
 
         assertMockEndpointsSatisfied();
