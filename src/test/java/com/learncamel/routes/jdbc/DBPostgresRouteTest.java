@@ -45,9 +45,12 @@ public class DBPostgresRouteTest extends CamelTestSupport {
 
     @Test
     public void insertData(){
-        String input = "first db input #2";
+        String input = "first db input";
 
         ArrayList responseList = template.requestBody("direct:dbInput", input, ArrayList.class);
+
+        System.out.println("responseList size: " + responseList.size());
+        assertNotEquals(0, responseList.size());
 
 
     }

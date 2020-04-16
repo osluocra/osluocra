@@ -9,7 +9,9 @@ public class DBPostgresRoute extends RouteBuilder {
         from("direct:dbInput")
                 .to("log:?level=INFO&showBody=true")
                 .process(new InsertProcessor())
-                .to("jdbc:myDataSource");
+                .to("jdbc:myDataSource")
+                .to("sql:select * from messages?dataSource=myDataSource")
+                .to("log:?level=INFO&showBody=true");
 
     }
 }
