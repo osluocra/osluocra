@@ -53,7 +53,7 @@ public class Jms2DBRouteTest extends CamelTestSupport {
         return ds;
     }
 
-    @Test
+    //@Test
     public void jms2DBRouteTest(){
         ArrayList responseList = (ArrayList) consumer.receiveBody("direct:output");
         System.out.println("responseList:" + responseList.size());
