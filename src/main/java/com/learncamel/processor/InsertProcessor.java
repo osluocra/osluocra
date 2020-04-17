@@ -1,4 +1,4 @@
-package com.learncamel.routes.jdbc;
+package com.learncamel.processor;
 
 import org.apache.camel.Exchange;
 
